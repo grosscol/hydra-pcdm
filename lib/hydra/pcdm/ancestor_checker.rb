@@ -13,6 +13,8 @@ module Hydra::PCDM
     #   the initialized record.
     def ancestor?(potential_ancestor)
       record == potential_ancestor || Hydra::PCDM::DeepMemberIterator.new(potential_ancestor).include?(record)
+
+      # new usage here would be: self.ancestor? potential_ancestor
     end
   end
 end
